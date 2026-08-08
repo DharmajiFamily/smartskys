@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sector 33: Sky Command</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="hud-header">
+    <div class="brand">
+      <h1>SECTOR 33</h1>
+      <span class="sub">NEXTGEN ATC SIMULATOR</span>
+    </div>
+    <div class="stats-panel">
+      <div class="stat-box">LEVEL <span id="level-num">1</span></div>
+      <div class="stat-box">SCORE <span id="score-val">0</span></div>
+      <div class="stat-box">MIN SEP <span id="sep-val" class="safe">-- NM</span></div>
+    </div>
+  </div>
+
+  <div id="radar-container">
+    <div id="danger-alert" class="alert hidden">⚠️ CONFLICT DETECTED (&lt; 3.0 NM)</div>
+    <canvas id="radarCanvas"></canvas>
+  </div>
+
+  <div class="instructions">
+    <p>🖱️ <strong>CLICK & DRAG</strong> aircraft speed vectors to adjust speed | Maintain <strong>3.0 NM</strong> separation at MODESTO (MOD)</p>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
