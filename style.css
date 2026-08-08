@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  margin: 0;
+  background: #030712;
+  color: #00ffcc;
+  font-family: 'Share Tech Mono', monospace;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.hud-header {
+  width: 900px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.brand h1 {
+  font-family: 'Orbitron', sans-serif;
+  margin: 0;
+  font-size: 1.8rem;
+  letter-spacing: 3px;
+  text-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
+}
+
+.brand .sub {
+  font-size: 0.75rem;
+  color: #4ba396;
+  letter-spacing: 2px;
+}
+
+.stats-panel {
+  display: flex;
+  gap: 15px;
+}
+
+.stat-box {
+  background: rgba(0, 255, 204, 0.05);
+  border: 1px solid rgba(0, 255, 204, 0.3);
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.9rem;
+}
+
+.stat-box span {
+  color: #fff;
+  font-weight: bold;
+}
+
+.stat-box span.safe { color: #00ffcc; }
+.stat-box span.danger { color: #ff0055; }
+
+#radar-container {
+  position: relative;
+  width: 900px;
+  height: 520px;
+  border: 2px solid #00ffcc;
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(0, 255, 204, 0.2), inset 0 0 40px rgba(0,0,0,0.9);
+  background: radial-gradient(circle at center, #081926 0%, #02060c 100%);
+  overflow: hidden;
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  cursor: crosshair;
+}
+
+.alert {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 0, 85, 0.9);
+  color: #fff;
+  font-family: 'Orbitron', sans-serif;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  box-shadow: 0 0 20px #ff0055;
+  animation: blink 0.6s infinite alternate;
+  z-index: 10;
+}
+
+.hidden { display: none; }
+
+@keyframes blink {
+  from { opacity: 0.6; }
+  to { opacity: 1; }
+}
+
+.instructions {
+  margin-top: 12px;
+  color: #52788a;
+  font-size: 0.85rem;
+}
+
+.instructions strong { color: #00ffcc; }
