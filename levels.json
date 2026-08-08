@@ -1,0 +1,21 @@
+[
+  {
+    "level": 1,
+    "name": "Modesto Standard Merge",
+    "targetWaypoint": { "name": "MOD", "x": 750, "y": 260 },
+    "aircraft": [
+      { "id": "NASA 101", "x": 50, "y": 140, "speed": 480, "color": "#00ffcc" },
+      { "id": "AAL 404", "x": 50, "y": 380, "speed": 360, "color": "#00bfff" }
+    ]
+  },
+  {
+    "level": 2,
+    "name": "Rush Hour Crossing",
+    "targetWaypoint": { "name": "MOD", "x": 750, "y": 260 },
+    "aircraft": [
+      { "id": "SWA 88", "x": 30, "y": 100, "speed": 520, "color": "#00ffcc" },
+      { "id": "UAL 911", "x": 30, "y": 260, "speed": 400, "color": "#00bfff" },
+      { "id": "DAL 312", "x": 30, "y": 420, "speed": 320, "color": "#ffaa00" }
+    ]
+  }
+]
